@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 10</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border: 1px solid #aaa;
+        }
+
+        /* HEADER */
+        header {
+            background: #e8e8e8;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        header .icon {
+            font-size: 40px;
+        }
+
+        header h1 {
+            margin: 5px 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 0;
+            color: #777;
+        }
+
+        /* INTRO */
+        .intro {
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+
+        .intro h3 {
+            margin: 0 0 10px;
+        }
+
+        .intro p {
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* ANGGOTA */
+        .members {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            padding: 0 15px 15px;
+        }
+
+        .member {
+            min-width: 0;
+            border: 1px solid #aaa;
+            border-radius: 7px;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .member-content {
+            display: flex;
+            gap: 12px;
+        }
+
+        .photo {
+            width: 105px;
+            height: 110px;
+            border: 1px solid #aaa;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            flex-shrink: 0;
+        }
+
+        .info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            display: inline-block;
+            margin: 4px 0 0 4px;
+            padding: 3px 10px;
+            border-radius: 15px;
+            background: #ddd;
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .bio {
+            display: grid;
+            grid-template-columns: 55px 8px minmax(0, 1fr);
+            gap: 7px 3px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .bio div {
+            overflow-wrap: anywhere;
+        }
+
+        /* QUOTES */
+        .member-footer {
+            margin-top: 12px;
+            padding: 10px;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .member-footer b {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .member-footer p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* ANGGOTA 5 DI TENGAH */
+        .member:nth-child(5) {
+            grid-column: 1 / 3;
+            width: 50%;
+            justify-self: center;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #e8e8e8;
+            border-top: 1px solid #aaa;
+            color: #555;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .members {
+                grid-template-columns: 1fr;
+            }
+
+            .member:nth-child(5) {
+                grid-column: auto;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .member-content {
+                flex-direction: column;
+            }
+
+            .photo {
+                width: 100%;
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <div class="icon">👥</div>
+        <h1>Kelompok 10</h1>
+        <p>Desain UI/UX &amp; Pemrograman Web</p>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro">
+
+        <p>
+            Halo Kami dari Kelompok 10. Website ini dibuat untuk
+            memperkenalkan anggota kelompok dan menampilkan informasi
+            singkat tentang masing-masing anggota.
+        </p>
+    </section>
+
+    <!-- DAFTAR ANGGOTA -->
+    <section class="members">
+
+        <!-- ANGGOTA 1 -->
+        <div class="member">
+            <div class="member-content">
+                <div class="photo">
+                    <img src="assets/Abidzar.jpg" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div class="info">
+                    <div class="name">
+                        Muhammad Abidzar
+                    </div>
+
+                    <div class="bio">
+                        <span>NIM</span><span>:</span>
+                        <div>0110226126</div>
+
+                        <span>Prodi</span><span>:</span>
+                        <div>Teknik Informatika</div>
+
+                        <span>TTL</span><span>:</span>
+                        <div>Jakarta, 08-11-2007</div>
+
+                        <span>Hobi</span><span>:</span>
+                        <div>Traveling, olahraga, dan baca komik</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer">
+                <p>"Mahasiswa Teknik Infomatika STT Nurul Fikri, kelompok 10."</p>
+            </div>
+        </div>
+
+
+        <!-- ANGGOTA 2 -->
+        <div class="member">
+            <div class="member-content">
+                <div class="photo">
+                    <img src="assets/Ghibran.jpg" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div class="info">
+                    <div class="name">
+                        Muhammad Ariiq Ghibran
+                    </div>
+
+                    <div class="bio">
+                        <span>NIM</span><span>:</span>
+                        <div>0110226030</div>
+
+                        <span>Prodi</span><span>:</span>
+                        <div>Teknik Informatika</div>
+
+                        <span>TTL</span><span>:</span>
+                        <div>Jakarta, 22-09-2008</div>
+
+                        <span>Hobi</span><span>:</span>
+                        <div>Olahraga</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer">
+                <p>"Mahasiswa Teknik Infomatika STT Nurul Fikri, kelompok 10."</p>
+            </div>
+        </div>
+
+
+        <!-- ANGGOTA 3 -->
+        <div class="member">
+            <div class="member-content">
+                <div class="photo">
+                    <img src="assets/Naufal.jpeg" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div class="info">
+                    <div class="name">
+                        Muhamad Naufal
+                    </div>
+
+                    <div class="bio">
+                        <span>NIM</span><span>:</span>
+                        <div>0110226103</div>
+
+                        <span>Prodi</span><span>:</span>
+                        <div>Teknik Informatika</div>
+
+                        <span>TTL</span><span>:</span>
+                        <div>Jakarta, 12-11-2007</div>
+
+                        <span>Hobi</span><span>:</span>
+                        <div>Berenang</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer">
+                <p>"Mahasiswa Teknik Infomatika STT Nurul Fikri, kelompok 10."</p>
+            </div>
+        </div>
+
+
+        <!-- ANGGOTA 4 -->
+        <div class="member">
+            <div class="member-content">
+                <div class="photo">
+                    <img src="assets/Fachrie.jpg" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div class="info">
+                    <div class="name">
+                        Moch Fachrie
+                    </div>
+
+                    <div class="bio">
+                        <span>NIM</span><span>:</span>
+                        <div>0110226138</div>
+
+                        <span>Prodi</span><span>:</span>
+                        <div>Teknik Informatika</div>
+
+                        <span>TTL</span><span>:</span>
+                        <div>Depok, 01-01-2008</div>
+
+                        <span>Hobi</span><span>:</span>
+                        <div>Berenang</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer">
+                <p>"Mahasiswa Teknik Infomatika STT Nurul Fikri, kelompok 10."</p>
+            </div>
+        </div>
+
+
+        <!-- ANGGOTA 5 -->
+        <div class="member">
+            <div class="member-content">
+                <div class="photo">
+                    <img src="assets/Rizki.jpg" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div class="info">
+                    <div class="name">
+                        Mohamad Rizki Pratama
+                    </div>
+
+                    <div class="bio">
+                        <span>NIM</span><span>:</span>
+                        <div>0110226014</div>
+
+                        <span>Prodi</span><span>:</span>
+                        <div>Teknik Informatika</div>
+
+                        <span>TTL</span><span>:</span>
+                        <div>Lenteng Agung, 13-07-2008</div>
+
+                        <span>Hobi</span><span>:</span>
+                        <div>Bermain bola, membaca Al-Qur'an</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer">
+                <p>"Mahasiswa Teknik Infomatika STT Nurul Fikri, kelompok 10."</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Kelompok 10. UI / UX</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
